@@ -1,0 +1,24 @@
+/*!
+ * reveal.js
+ * http://lab.hakim.se/reveal-js
+ * MIT licensed
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ *
+ * Forked and heavily modified by wes@wesruv.com
+ */
+
+
+@import 'partials/mixin';
+@import 'partials/base';
+@import 'partials/slides';
+@import 'partials/view-fragments';
+//@import 'partials/controls';
+@import 'partials/wes-controls';
+@import 'partials/progress';
+@import 'partials/transitions';
+@import 'partials/slide-background';
+@import 'partials/overlays';
+@import 'partials/rolling-links';
+@import 'partials/zoom';
+@import 'partials/custom-utilities';

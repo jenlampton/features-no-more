@@ -1,0 +1,27 @@
+{
+  "name": "reveal.js",
+  "version": "3.1.0",
+  "main": [
+    "reveal.js/js/reveal.js",
+    "reveal.js/css/reveal.css"
+  ],
+  "homepage": "http://lab.hakim.se/reveal-js/",
+  "license": "MIT",
+  "description": "The HTML Presentation Framework in a Backdrop flavor",
+  "authors": [
+    "Hakim El Hattab <hakim.elhattab@gmail.com>"
+  ],
+  "dependencies": {
+    "headjs": "~0.9.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hakimel/reveal.js.git"
+  },
+  "ignore": [
+    "reveal.js/**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}

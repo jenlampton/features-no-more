@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Web Dev Flavored reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="plugin/prism/prism.css">
+    <link rel="stylesheet" href="plugin/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/theme/backdrop.css" id="theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <p class="small" style="position: relative; top: -6em;"><strong>Pro-tip:</strong> Press <span style="display: inline-block; padding: .2em .6em; border: 1px solid #777; border-radius: .3em; background: #fff; box-shadow: 0 1px 0 #555, 0 2px 0 #555, 0 3px 0 #555, 0 4px 0 #555; position: relative; top: -.1em;">space bar</span> to progress and it won't skip any slides</p>
+          <div class="color-link">Web Dev Flavored</div>
+          <h1>Reveal.js</h1>
+          <h3>The HTML Presentation Framework</h3>
+          <p><small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a><br>
+          this version is heavily modified by <a href="http://wesruv.com">Wes Ruvalcaba</a> / <a href="http://twitter.com/wesruv">@wesruv</a></small></p>
+        </section>
+
+        <section>
+          <h2>Hello There</h2>
+          <p>
+            reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+          </p>
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2>Vertical Slides</h2>
+            <p>Slides can be nested inside of each other.</p>
+            <p>Use the <em>Space</em> key to navigate through all slides.</p>
+            <br>
+            <a href="#" class="navigate-down">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section>
+            <h2>Basement Level 1</h2>
+            <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+          </section>
+          <section>
+            <h2>Basement Level 2</h2>
+            <p>That's it, time to go back up.</p>
+            <br>
+            <a href="#/2">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+            </a>
+          </section>
+        </section>
+
+        <section>
+          <h2>Slides</h2>
+          <p>
+            Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Point of View</h2>
+          <p>
+            Press <strong>ESC</strong> to enter the slide overview.
+          </p>
+          <p>
+            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+          </p>
+        </section>
+
+        <section>
+          <section data-background="#dddddd">
+            <h2>Slide Backgrounds</h2>
+            <p>
+              Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+            </p>
+            <a href="#" class="navigate-down">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+            <h2>Image Backgrounds</h2>
+            <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+          </section>
+          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+            <h2>Tiled Backgrounds</h2>
+            <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+          </section>
+          <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+              <h2>Video Backgrounds</h2>
+              <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+            </div>
+          </section>
+          <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+            <h2>... and GIFs!</h2>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Extra CSS helpers</h2>
+            <p>Because there's often a need for simple layout utilities, this version of reveal has a few built in classes and helpers.</p>
+          </section>
+          <section>
+            <h3>Column Layout</h3>
+            <p>Resilient equal height and equal width columns.</p>
+            <div class="column-wrapper">
+              <div>
+                <div class="small" style="font-weight: bold;">Code</div>
+                <pre><code class="language-markup">&lt;div class="column-wrapper"&gt;
+  &lt;div style="border: 1px solid"&gt;
+    Column 1&lt;br&gt;&lt;br&gt;&lt;br&gt;
+  &lt;/div&gt;
+  &lt;div style="border: 1px solid"&gt;
+    Column 2
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+              <div>
+                <div class="small" style="font-weight: bold;">Render</div>
+                <div class="column-wrapper">
+                  <div class="column-wrapper">
+                    <div style="border: 1px solid">
+                      Column 1<br><br><br>
+                    </div>
+                    <div style="border: 1px solid">
+                      Column 2
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="small">See README.md for more info.</p>
+          </section>
+          <section>
+            <h3>File Listings</h3>
+            <div class="column-wrapper">
+              <div style="flex-grow: 0; width: 50%;">
+                <pre><code class="language-markup">&lt;ul class="file-list"&gt;
+  &lt;li&gt;Folder name&lt;/li&gt;
+  &lt;li&gt;Folder name
+    &lt;ul&gt;
+      &lt;li&gt;Nested folder&lt;/li&gt;
+      &lt;li&gt;Nested folder&lt;/li&gt;
+      &lt;li class="file"&gt;Nested file&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Folder&lt;/li&gt;
+  &lt;li class="file"&gt;File&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+              <div style="flex-grow: 0; width: 50%;">
+                <ul class="file-list">
+                  <li>Folder</li>
+                  <li>Folder
+                    <ul>
+                      <li>Nested folder</li>
+                      <li>Nested folder</li>
+                      <li class="file">Nested file</li>
+                    </ul>
+                  </li>
+                  <li>Folder name</li>
+                  <li class="file">File</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Color Classes</h3>
+            <div class="column-wrapper">
+              <pre><code class="language-markup">&lt;span class="color-link"&gt;Link color&lt;/span&gt;
+&lt;span class="bg-link"&gt;Link background&lt;/span&gt;&lt;br&gt;
+&lt;span class="color-slide-bg"&gt;Slide BG color&lt;/span&gt;
+&lt;span class="bg-slide-bg"&gt;Slide BG background&lt;/span&gt;&lt;br&gt;
+&lt;span class="color-headline"&gt;Headline color&lt;/span&gt;
+&lt;span class="bg-headline"&gt;Headline background&lt;/span&gt;&lt;br&gt;
+&lt;span class="color-highlighter"&gt;Highlighter color&lt;/span&gt;
+&lt;span class="bg-highlighter"&gt;Highlighter background&lt;/span&gt;</code></pre>
+              <div>
+                <span class="color-link">Link color</span>
+                <span class="bg-link">Link background</span><br>
+                <span class="color-slide-bg">Slide BG color</span>
+                <span class="bg-slide-bg">Slide BG background</span><br>
+                <span class="color-headline">Headline color</span>
+                <span class="bg-headline">Headline background</span><br>
+                <span class="color-highlighter">Highlighter color</span>
+                <span class="bg-highlighter">Highlighter background</span>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Icons by Font Awesome</h2>
+            <div style="text-align: left">
+              <p>For iconography I've included FontAwesome for it's ease of use and good documentation. Basic syntax is:</p>
+              <pre><code class="language-markup">&lt;i class="fa fa-star"&gt;&lt;/i&gt; Here is my star</pre></code>
+              <p><i class="fa fa-star"></i> Here is my star</p>
+              <p style="color: #225378; font-size: 1.2em; text-align: center"><i class="fa fa-check-square-o"></i> &nbsp; <i class="fa fa-cloud"></i> &nbsp; <i class="fa fa-cog"></i> &nbsp; <i class="fa fa-drupal"></i> &nbsp; <i class="fa fa-html5"></i> &nbsp; <i class="fa fa-folder" style="color: #225378"></i> &nbsp; <i class="fa fa-image"></i> &nbsp; </p>
+              <p>For a complete list of fonts go to <a href="http://fontawesome.io/cheatsheet/">fontawesome.io/cheatsheet</a></p>
+            </div>
+          </section>
+          <section>
+            <div style="text-align: left">
+              <p>Since it's an icon <strong>font</strong>, use font CSS to manipulate it (<code>font-size</code>, <code>color</code>, etc).</p>
+              <p>For more code examples see: <a href="http://fortawesome.github.io/Font-Awesome/examples">fortawesome.github.io/Font-Awesome/examples</a></p>
+
+              <p><a href="http://fortawesome.github.io/Font-Awesome">fortawesome.github.io/Font-Awesome</a></p>
+          </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+          <h2>Prettier Code</h2>
+          <pre><code class="language-javascript">function linkify( selector ) {
+  if( supports3DTransforms ) {
+    var nodes = document.querySelectorAll( selector );
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}</code></pre>
+            <p class="small">Code syntax highlighting courtesy of <a href="http://prismjs.com/">prism.js</a>.</p>
+          </section>
+
+          <section>
+            <h3>Languages available</h3>
+            <h4>(By default)</h4>
+            <p>This version of reveal.js <code>prism.js</code> highlighting. By default the following syntaxes have been included:</p>
+            <div class="column-wrapper">
+              <ul>
+                <li>Markup (aka HTML)</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Bash</li>
+                <li>Git</li>
+              </ul>
+              <ul>
+                <li>PHP</li>
+                <li>JSX</li>
+                <li>SCSS</li>
+                <li>Twig</li>
+                <li>YAML</li>
+              </ul>
+          </section>
+          <section>
+            <h3>Example Code</h3>
+            <p style="text-align: left">To use any of these your syntax should look like:</p>
+            <pre><code class="language-markup">&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;!-- Example --&amp;gt;
+&amp;lt;p&amp;gt;Keep your first line of code on the same line
+as the pre and code tag, and avoid any indenting that you
+don't want in the presentation.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;It doesn't look as good in code view, but it's
+better for the rendered view&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;</pre></code>
+          </section>
+          <section>
+<p style="text-align: left">Will look like:</p>
+<pre><code class="language-markup">&lt;!-- Example --&gt;
+&lt;p&gt;Keep your first line of code on the same line
+as the pre and code tag, and avoid any indenting that you
+don't want in the presentation.&lt;/p&gt;
+
+&lt;p&gt;It doesn't look as good in code view, but it's
+better for the rendered view&lt;/p&gt;</code></pre>
+          </section>
+          <section>
+            <h3>More Prism.js Info</h3>
+            <div style="text-align: left">
+              <p>Also included are the line-highlight and line number, documentation for those are here:</p>
+              <ul>
+                <li><a href="http://prismjs.com/plugins/line-highlight/">prismjs.com/plugins/line-highlight</a></li>
+                <li><a href="http://prismjs.com/plugins/line-numbers/">prismjs.com/plugins/line-numbers</a></li>
+              </ul>
+              <p>To replace/augment the languages included or plugins <a href="http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+css-extras+git+php+php-extras+jsx+scss+twig+yaml&plugins=line-highlight+line-numbers">download a different custom build</a></p>
+
+              <p>The code is in <code>plugins/prismjs/</code>.</p>
+
+              <p>For any other issues see <a href="http://prismjs.com">prismjs.com</a></p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h2>Marvelous List</h2>
+          <ul>
+            <li>No order here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fantastic Ordered List</h2>
+          <ol>
+            <li>One is smaller than...</li>
+            <li>Two is smaller than...</li>
+            <li>Three!</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Tabular Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Value</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apples</td>
+                <td>$1</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Lemonade</td>
+                <td>$2</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Bread</td>
+                <td>$3</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Clever Quotes</h2>
+          <p>
+            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+          </p>
+          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Touch Optimized</h2>
+          <p>
+            Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+          </p>
+        </section>
+
+        <section>
+          <section id="fragments">
+            <h2>Fragments</h2>
+            <p>Hit the space bar...</p>
+            <p class="fragment">... to step through ...</p>
+            <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+            <aside class="notes">
+              This slide has fragments which are also stepped through in the notes window.
+            </aside>
+          </section>
+          <section>
+            <h2>Fragment Styles</h2>
+            <p>There's different types of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment current-visible">current-visible</p>
+            <p class="fragment highlight-red">highlight-red</p>
+            <p class="fragment highlight-blue">highlight-blue</p>
+          </section>
+        </section>
+
+        <section id="transitions">
+          <h2>Transition Styles</h2>
+          <p>
+            You can select from different transitions, like: <br>
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=slide#/transitions">Slide</a> -
+            <a href="?transition=convex#/transitions">Convex</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a>
+          </p>
+        </section>
+
+        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+          <h2>Background Transitions</h2>
+          <p>
+            Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+          </p>
+          <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+        </section>
+
+        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+          <h2>Background Transitions</h2>
+          <p>
+            You can override background transitions per-slide.
+          </p>
+          <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>Intergalactic Interconnections</h2>
+          <p>
+            You can link between slides internally,
+            <a href="#/2/3">like this</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Speaker View</h2>
+          <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+          <p>Press the <em>S</em> key to try it out.</p>
+
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+
+        <section>
+          <h2>Export to PDF</h2>
+          <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+        </section>
+
+        <section>
+          <h2>Global State</h2>
+          <p>
+            Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+            will be added as a class to the document element when the slide is open. This lets you
+            apply broader style changes, like switching the page background.
+          </p>
+        </section>
+
+        <section data-state="customevent">
+          <h2>State Events</h2>
+          <p>
+            Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+          </p>
+          <pre><code class="language-javascript" data-trim contenteditable>Reveal.addEventListener( 'customevent', function() {
+  console.log( '"customevent" has fired' );
+} );</code></pre>
+        </section>
+
+        <section>
+          <h2>Take a Moment</h2>
+          <p>
+            Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+          </p>
+        </section>
+
+        <section>
+          <h2>Much more</h2>
+          <ul>
+            <li>Right-to-left support</li>
+            <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+            <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+            <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+            <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+          </ul>
+        </section>
+
+        <section style="text-align: left;">
+          <h1>THE END</h1>
+          <p>
+            - <a href="https://github.com/wesruv/reveal.js">Source code &amp; documentation</a>
+          </p>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="plugin/prism/prism.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/prism/prism.js', async: true },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

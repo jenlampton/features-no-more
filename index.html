@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Life without Features</title>
+
+    <meta name="description" content="How to managage Drupal 7 sites long-term, without using the Features module.">
+    <meta name="author" content="Jen Lampton">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/plugin/prism/prism.css">
+    <link rel="stylesheet" href="reveal.js/plugin/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/vienna.css" id="theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section data-background-color="#000" class="dark">
+          <h1 style="font-weight: 400">Life without Features</h1>
+          <h3>by Jen Lampton</h3>
+        </section>
+
+        <section>
+          <h1>Hi!</h1>
+          <h2>You might already know me from...</h2>
+          <ul>
+            <li class="fragment">BADCamp</li>
+            <li class="fragment">Twig</li>
+            <li class="fragment">Backdrop CMS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>I'm Jen Lampton</h1>
+          <h3 class="fragment">I've been a Drupaler for 11 years <i class="fa fa-heart" aria-hidden="true"></i></h3>
+        </section>
+
+        <section>
+          <h2>I'm an independant contractor.</h2>
+          <ul>
+            <li class="fragment">smaller teams (1-4 people)</li>
+            <li class="fragment">projects with smaller budgets ($5k - $50k)</li>
+            <li class="fragment">smaller sites</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Example site: https://mtc.ca.gov</h2>
+          <ul>
+            <li class="fragment">2 active developers</li>
+            <li class="fragment">~10 active editors</li>
+            <li class="fragment">~100 contrib modules in use</li>
+            <li class="fragment">Built in Drupal 7</li>
+          </ul>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1>Drupal 7</h1>
+        </section>
+
+        <section>
+          <h1>Quick Poll</h1>
+          <ul>
+            <li class="fragment">How many of you are running or managing D7 sites?</li>
+            <li class="fragment">Using the features module on any of those D7 sites?</li>
+            <li class="fragment">Had any troubles managing your features?</li>
+          </ul>
+          <h3 class="fragment">This talk might help you!</h3>
+        </section>
+
+
+        <section data-background-color="#000" class="dark">
+          <h1>Features</h1>
+          <h3>An awesome Module for Drupal!</h3>
+          <h4>https://drupal.org/project/features</h4>
+        </section>
+
+        <section>
+          <h2>Two use-cases for using Features:</h2>
+          <ol>
+            <li class="fragment">Bundling functionality together</li>
+            <li class="fragment">Configuration management</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>#1 Bundling functionality together</h2>
+          <h3>Example: photo gallery</h3>
+          <h4 class="fragment">(this is the use-case for which the module was named)</h4>
+        </section>
+
+        <section>
+          <h2>#2 Configuration management</h2>
+          <h3>Improved developer workflow (existing sites)</h3>
+          <h4 class="fragment">(this is the more common use-case*)</h4>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1>But this sounds great!</h1>
+          <h4 class="fragment">In theory... yes! But, on smaller sites?</h4>
+        </section>
+
+        <section>
+          <h2>#1 Bundling functionality together</h2>
+          <h4>I have only delivered the <strong>exact same</strong> photo gallery on more than one site <strong>one time</strong>.</h4>
+          <h4 class="fragment">(so, let's set aside use-case #1)</h4>
+        </section>
+
+        <section>
+          <h2>#2 Configuration management</h2>
+          <h4>Every site I've used features on has had problems. My 3 favs:</h4>
+          <ul>
+            <li class="fragment">Performace</li>
+            <li class="fragment">Developer Time</li>
+            <li class="fragment">Developer Sanity</li>
+          </ul>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1 style="font-weight: 400">It's not Features fault!</h1>
+          <h3 class="fragment">(it's Drupal's)</h3>
+        </section>
+
+        <section>
+          <h2>These kinds of problems are harder for smaller sites<br/>(&amp; smaller website businesses)</h2>
+        </section>
+
+        <section>
+          <h1>Performace</h1>
+          <h3>Smaller sites may not benefit from fancy/expsnsive hosting w/ lots of cache layers</h3>
+        </section>
+
+        <section>
+          <h1>Developer Time</h1>
+          <h3>Project owners often can't afford to pay much beyond the estimate. Overages hurt.</h3>
+        </section>
+
+        <section>
+          <h1>Developer Sanity</h1>
+          <h3>Okay, you got me. <br>All developers diserve to stay sane!</h3>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1 style="font-weight: 400">Is there another way?</h1>
+          <h3 class="fragment">maybe!</h3>
+        </section>
+
+        <section>
+          <h1>How does the Features module work?</h1>
+        </section>
+
+        <section>
+          <h1>Drupal's API!</h1>
+          <ul>
+            <li class="fragment">Provides ways to ingest things from code</li>
+            <li class="fragment">Provides ways to override those things</li>
+          </ul>
+          <h4 class="fragment">(these are all the things that work <strong>reliably</strong> with Features.)</h4>
+          <h4 class="fragment">You could invoke these same hooks, in a similar way, with your own custom code!</h4>
+        </section>
+
+        <section>
+          <h2>But, what about all the other things?</h2>
+          <h4>Drupal expects these configuratons to be in the database and <strong>not in code</strong>.</h4>
+          <div class="fragment">
+            <h2>Here's a crazy idea...</h2>
+            <h4>Can we leave them in the database?</h4>
+          </div>
+        </section>
+
+        <section>
+          <h2>Two ways to manage config in the database</h2>
+          <ol>
+            <li class="fragment">Do it manually (if it's safe)</li>
+            <li class="fragment">Wtite an update hook (if it's not)</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Way #1: Doin' it manually</h2>
+          <ol>
+            <li>Take good notes, then follow them.
+              <ul>
+                <li>document everything that needs to be repeated (suitable only for simple tasks)</li>
+              </ul>
+            </li>
+            <li class="fragment">Create new things directly on the live site.
+              <ul>
+                <li>With the necessary access controls in place, they won't be noticed. (not for the faint of heart)</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Way #2: Updain' it oldskool-like</h2>
+          <h3>Write an update hook.</h3>
+          <h4>If you need to modify something at the exact time of deployment, this is your ticket.</h4>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1 style="font-weight: 400">OMG!</h1>
+          <h2>She said "custom code"!</h1>
+        </section>
+
+        <section>
+          <h1>Let's reveiw the goal:</h1>
+          <ul>
+            <li class="fragment">Don't harm site performace</li>
+            <li class="fragment">Save developer time</li>
+            <li class="fragment">Retain developer sanity</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Believe it or not, I've been able to achieve all of these things <strong>reliably</strong> using scary <strong>custom code</strong>.</h4>
+        </section>
+
+        <section>
+          <h1>What's in the code?</h1>
+          <ul>
+            <li>A stub module for each type of configuration that can be cleanly exported containing organized, individual files for each export.</li>
+            <li>And (if you want) a custom module specifically for deployment updates.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>An example:</h1>
+          <h2>For managing your views</h2>
+        </section>
+
+        <section>
+          <h1>An example:</h1>
+          <h2>For managing your panels</h2>
+        </section>
+
+        <section>
+          <h1>More examples:</h1>
+          <ul>
+            <li>For managing your view modes</li>
+            <li>For managing your image styles</li>
+            <li>For managing your date formats</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Many systems already have a way to define (or override) their defaults.</h3>
+        </section>
+
+        <section>
+          <h3>Custom code is not so scary when you have an example to work from.</h3>
+        </section>
+
+        <section>
+          <h2>I've open-sourced all the code we looked at today (and more!):</h2>
+          <p><i class="fa fa-github" aria-hidden="true"></i> <a href="ttps://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
+        </section>
+
+        <section>
+          <h3>My team has found that using these modules create more stable sites, and more sane developers.</h3>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1>Questions?</h1>
+          <p><i class="fa fa-github" aria-hidden="true"></i> <a href="ttps://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
+        </section>
+
+        <section data-background-color="#000" class="dark">
+          <h1 style="font-weight: 400">Life without Features</h1>
+          <h3>by Jen Lampton</h3>
+        </section>
+
+        <section>
+          <h4>Image Credits</h4>
+          <p><small>
+            SquareSpace: http://commons.wikimedia.org/wiki/File:Squarespace_Logo.png<br>
+            Wordpress: https://wordpress.org/about/logos <br>
+            Backdrop: https://backdropcms.org/about/logo <br>
+            Drupal: https://www.drupal.org/node/9068 <br>
+          </small></p>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/prism/prism.js', async: true },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>

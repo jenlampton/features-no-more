@@ -1,0 +1,23 @@
+/*********************************************
+ * ZOOM PLUGIN
+ *********************************************/
+
+.zoomed .reveal *,
+.zoomed .reveal *:before,
+.zoomed .reveal *:after {
+  backface-visibility: visible !important;
+}
+
+.zoomed .reveal .progress,
+.zoomed .reveal .controls {
+  opacity: 0;
+}
+
+.zoomed .reveal .roll span {
+  background: none;
+}
+
+.zoomed .reveal .roll span:after {
+  visibility: hidden;
+}
+

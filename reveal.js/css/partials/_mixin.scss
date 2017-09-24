@@ -1,0 +1,40 @@
+/*********************************************
+ * Mixins for readability of transitions
+ *********************************************/
+
+@mixin transition-global($style) {
+  .reveal .slides>section[data-transition=#{$style}],
+  .reveal.#{$style} .slides>section:not([data-transition]) {
+    @content;
+  }
+}
+@mixin transition-horizontal-past($style) {
+  .reveal .slides>section[data-transition=#{$style}].past,
+  .reveal .slides>section[data-transition~=#{$style}-out].past,
+  .reveal.#{$style} .slides>section:not([data-transition]).past {
+    @content;
+  }
+}
+@mixin transition-horizontal-future($style) {
+  .reveal .slides>section[data-transition=#{$style}].future,
+  .reveal .slides>section[data-transition~=#{$style}-in].future,
+  .reveal.#{$style} .slides>section:not([data-transition]).future {
+    @content;
+  }
+}
+
+@mixin transition-vertical-past($style) {
+  .reveal .slides > section > section[data-transition=#{$style}].past,
+  .reveal .slides > section > section[data-transition~=#{$style}-out].past,
+  .reveal.#{$style} .slides > section > section:not([data-transition]).past {
+    @content;
+  }
+}
+@mixin transition-vertical-future($style) {
+  .reveal .slides>section>section[data-transition=#{$style}].future,
+  .reveal .slides>section>section[data-transition~=#{$style}-in].future,
+  .reveal.#{$style} .slides>section>section:not([data-transition]).future {
+    @content;
+  }
+}
+
