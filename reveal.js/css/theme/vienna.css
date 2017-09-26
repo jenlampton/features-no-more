@@ -5,8 +5,21 @@
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 @import url(../../lib/font/open-sans/open-sans.css);
-section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #fff; }
+section.dark,
+section.dark h1,
+section.dark h2,
+section.dark h3,
+section.dark h4,
+section.dark h5,
+section.dark h6 {
+  color: #EAE8E9;
+}
+section.dark a {
+  color: #C48D09;
+}
+section.dark i {
+  color: #C48D09;
+}
 
 /*********************************************
  * FONTS
@@ -28,19 +41,39 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 
 /*********************************************
+ * SLIDE STYLES
+ *********************************************/
+html.cover body section {
+  margin-top: 25%;
+}
+html.thanks body section h1,
+html.cover body section h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+html.thanks body section h3,
+html.cover body section h3 {
+  font-size: 1.5em;
+  color: #C48D09;
+}
+
+
+/*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fafafa;
-  background-color: #fafafa;
+  background: #fafafa none top center no-repeat;
+  background-size: 100%;
   font-family: "Source Sans Pro", "Open Sans", Helvetica, sans-serif;
-  color: #000;
+  color: #3A546A;
+  padding-top: 30px;
 }
 
 .reveal {
   font-size: 38px;
   font-weight: normal;
-  color: #000;
+  color: #3A546A;
 }
 
 ::selection {
@@ -51,7 +84,12 @@ body {
 .reveal .slides > section,
 .reveal .slides > section > section {
   line-height: 1.3;
-  font-weight: inherit; }
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: underline;
+}
 
 /*********************************************
  * HEADERS
@@ -63,7 +101,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #222;
+  color: #3A546A;
   font-family: "Source Sans Pro", "Open Sans", Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.2;
