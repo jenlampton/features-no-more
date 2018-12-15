@@ -1,7 +1,7 @@
 /**
  * Black theme for reveal.js. This is the opposite of the 'white' theme.
  *
- * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ * By Hakim El Hattab, http://hakim.se
  */
 
 
@@ -19,9 +19,9 @@
 $backgroundColor: #222;
 
 $mainColor: #fff;
-$headingColor: #73ceff;
+$headingColor: #fff;
 
-$mainFontSize: 38px;
+$mainFontSize: 42px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
@@ -31,9 +31,6 @@ $headingFontWeight: 600;
 $linkColor: #42affa;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
-
-$arrowColor: #fff;
-$arrowBGColor: #000;
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
