@@ -5,6 +5,4 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
-*.min.css
-*.min.js
 
