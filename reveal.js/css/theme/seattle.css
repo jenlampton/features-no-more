@@ -1,12 +1,11 @@
 /**
- * A reveal.js theme for DrupalCon Vienna.
- * - Authored by Jen Lampton, 2017.
+ * A reveal.js theme for DrupalCon Seattle 2019.
+ * - Authored by Jen Lampton.
  * - Credit to Wes Ruvacabla for the inspiration.
  */
 
 @charset "UTF-8";
 @import url(../../lib/font/open-sans/open-sans.css);
-
 section.dark,
 section.dark h1,
 section.dark h2,
