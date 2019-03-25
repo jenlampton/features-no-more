@@ -5,86 +5,98 @@
  */
 
 @charset "UTF-8";
-@import url(../../lib/font/open-sans/open-sans.css);
-section.dark,
-section.dark h1,
-section.dark h2,
-section.dark h3,
-section.dark h4,
-section.dark h5,
-section.dark h6 {
-  color: #EAE8E9;
-}
-section.dark a {
-  color: #C48D09;
-}
-section.dark i {
-  color: #C48D09;
-}
 
 /*********************************************
  * FONTS
  *********************************************/
 
+ /* Open Sans ****************************************************************/
+@import url(../../lib/font/open-sans/open-sans.css);
+
+/* Montserrat ***************************************************************/
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('../../../fonts/SourceSansPro-Black.ttf');
-  src: local('Source Sans Pro'), url('../../../fonts/SourceSansPro-Black.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat/Montserrat-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
-
-/*
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('../../../fonts/SourceSansPro-Bold.ttf');
-  src: local('Source Sans Pro'), url('../../../fonts/SourceSansPro-Bold.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat/Montserrat-Light.ttf');
+  font-weight: 300; /* light */
+  font-style: normal;
 }
-*/
-
-
-/*********************************************
- * SLIDE STYLES
- *********************************************/
-html.cover body section {
-  margin-top: 25%;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat/Montserrat-Bold.ttf');
+  font-weight: bold; /* Bold */
+  font-style: normal;
 }
-html.thanks body section h1,
-html.cover body section h1 {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-html.thanks body section h3,
-html.cover body section h3 {
-  font-size: 1.5em;
-  color: #C48D09;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat/Montserrat-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
 }
 
+/* Bitter ********************************************************************/
+@font-face {
+  font-family: 'Bitter';
+  src: url('../../fonts/Bitter/Bitter-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bitter';
+  src: url('../../fonts/Bitter/Bitter-Bold.ttf');
+  font-weight: bold; /* Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bitter';
+  src: url('../../fonts/Bitter/Bitter-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+html {
+  font-size: 16px; /* to set rems */
+}
+
 body {
   background: #fafafa none top center no-repeat;
   background-size: 100%;
-  font-family: "Source Sans Pro", "Open Sans", Helvetica, sans-serif;
-  color: #3A546A;
 }
 
 .reveal {
-  font-size: 38px;
-  font-weight: normal;
+  font-family: "Montserrat", Helvetica, sans-serif;
   color: #3A546A;
+  font-size: 30px;
+}
+.reveal section {
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
 }
 
 ::selection {
   color: #fff;
   background: #3eb4ff;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
-.reveal .slides > section,
+.reveal .slides > section {
+  line-height: 1.3;
+  font-weight: inherit;
+  padding: 160px 0 40px 0;
+}
 .reveal .slides > section > section {
   line-height: 1.3;
   font-weight: inherit;
+  padding: 0;
 }
 
 a {
@@ -100,14 +112,15 @@ a {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  margin: 0 0 20px 0;
-  color: #3A546A;
-  font-family: "Source Sans Pro", "Open Sans", Helvetica, sans-serif;
-  font-weight: 400;
+  margin: 0 0 .5em 0;
+  color: #0C4167;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 300; /* light */
   line-height: 1.2;
   letter-spacing: normal;
   text-shadow: none;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+}
 
 section h1:first-child,
 section h2:first-child,
@@ -115,39 +128,43 @@ section h3:first-child,
 section h4:first-child,
 section h5:first-child,
 section h6:first-child {
-  text-transform: none; }
+  text-transform: none;
+}
 
 .reveal h1 {
-  font-size: 2.5em;
-  font-weight: 200; }
-
+  font-size: 80px;
+  font-family: "Bitter", Georgia, serif;
+  text-shadow: none;
+}
 .reveal h2 {
-  font-size: 1.6em; }
-
+  font-size: 48px;
+  font-family: "Bitter", Georgia, serif;
+}
 .reveal h3 {
-  font-size: 1.3em; }
-
+  font-size: 1.3em;
+}
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1em;
+}
+.reveal h5,
+.reveal h6 {
+  font-size: 33px;
+  letter-spacing: 1px;
+}
+.reveal h6 {
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
 
-.reveal h5 {
-  font-size: .85em; }
-
-.reveal h1 {
-  text-shadow: none; }
-
-.reveal h3:first-child,
-.reveal h4:first-child,
-.reveal h5:first-child,
-.reveal h6:first-child {
-  font-size: 1.6em; }
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
-  margin: 20px 0;
-  line-height: 1.3; }
+  margin: 45px 0;
+  line-height: 1.4;
+}
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
@@ -176,14 +193,19 @@ section h6:first-child {
 }
 
 .reveal li {
-  margin: 0 0 0.25em;
+  margin: 0 0 0.5em;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: #3A546A;
 }
 
 .reveal ol {
-  list-style-type: decimal; }
+  list-style-type: decimal;
+}
 
 .reveal ul {
-  list-style-type: disc; }
+  list-style-type: disc;
+  margin-bottom: 1em;
+}
 
 .reveal ul ul {
   list-style-type: square; }
@@ -325,8 +347,9 @@ pre {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12); }
+  margin: 0 0 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+}
 
 /*********************************************
  * NAVIGATION CONTROLS
@@ -406,4 +429,129 @@ pre {
 
 .fa-folder,
 .fa-file {
-  color: #0084d7; }
+  color: #0084d7;
+}
+
+/*********************************************
+ * Slide Types - background
+ *********************************************/
+.reveal .slide-background {
+  background-position: top left;
+  background-size: cover;
+}
+
+/*********************************************
+ * Slide Types - dark
+ *********************************************/
+.reveal .slides > section.dark {
+  padding: 250px 0 40px 0;
+}
+.reveal .slides > section.dark:after {
+  content: ' ';
+  position: absolute;
+  bottom: 50px;
+  border-bottom: 3px solid #fff;
+  left: 30%;
+  right: 30%;
+}
+section.dark,
+section.dark h1,
+section.dark h2,
+section.dark h3,
+section.dark h4,
+section.dark h5,
+section.dark h6,
+section.dark a,
+section.dark i {
+  color: #fff;
+}
+
+section.dark h1 {
+  font-size: 110px;
+}
+
+/*********************************************
+ * Specific Slides - cover
+ *********************************************/
+html.cover .reveal .slides > section {
+  padding: 330px 0 40px 0;
+}
+html.cover .reveal section h1 {
+  font-size: 2em;
+}
+html.cover .reveal section h3 {
+  font-size: 1em;
+}
+
+/*********************************************
+ * Specific Slides - taller
+ *********************************************/
+html.taller .reveal .slides > section {
+  padding: 40px 0 40px 0;
+}
+
+/*********************************************
+ * Specific Slides - thanks
+ *********************************************/
+html.thanks body section h1 {
+
+}
+html.thanks body section h3 {
+
+}
+
+/*********************************************
+ * Utility Classes
+ *********************************************/
+
+/* make it red */
+.reveal .subtitle {
+  color: #D8113A;
+  font-weight: 300; /* light */
+}
+
+/* stick it to tbe bottom */
+.reveal .foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.reveal .dark .foot {
+  bottom: 60px;
+}
+
+/* size */
+.reveal .larger,
+.reveal .larger * {
+  font-size: 1.25em;
+}
+.reveal .larger li {
+  margin: 0 0 0.6666em;
+}
+
+/* padding */
+.reveal .pad-left {
+  padding-left: 30px;
+}
+.reveal .pad-right {
+  padding-right: 30px;
+}
+.reveal .pad-top {
+  padding-top: 30px;
+}
+.reveal .pad-bottom {
+  padding-bottom: 30px;
+}
+
+/* alignment */
+.reveal .centered {
+  text-align: center;
+}
+.reveal .align-left {
+  text-align: left;
+}
+.reveal .align-right {
+  text-align: right;
+}

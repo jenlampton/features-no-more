@@ -1,0 +1,45 @@
+/*********************************************
+ * ROLLING LINKS
+ *********************************************/
+
+.reveal .roll {
+  display: inline-block;
+  line-height: 1.2;
+  overflow: hidden;
+
+  vertical-align: top;
+  perspective: 400px;
+  perspective-origin: 50% 50%;
+}
+  .reveal .roll:hover {
+    background: none;
+    text-shadow: none;
+  }
+.reveal .roll span {
+  display: block;
+  position: relative;
+  padding: 0 2px;
+
+  pointer-events: none;
+  transition: all 400ms ease;
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+  .reveal .roll:hover span {
+      background: rgba(0,0,0,0.5);
+      transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg );
+  }
+.reveal .roll span:after {
+  content: attr(data-title);
+
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 2px;
+  backface-visibility: hidden;
+  transform-origin: 50% 0%;
+  transform: translate3d( 0px, 110%, 0px ) rotateX( -90deg );
+}
+

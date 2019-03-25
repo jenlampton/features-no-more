@@ -1,0 +1,138 @@
+/*********************************************
+ * Updated CONTROLS
+ *********************************************/
+
+$arrow-color: #eee;
+$arrow-background: #000;
+
+.controls {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+  z-index: 30;
+  width: 9em;
+  height: 9em;
+  font-size: 0.8rem;
+  -webkit-user-select: none;
+  opacity: 0;
+  transition: .25s opacity ease-out;
+  will-change: opacity;
+}
+
+body:hover .controls {
+  opacity: 1;
+}
+
+.controls div {
+  position: absolute;
+  opacity: 0.2;
+  transition: opacity 0.2s ease;
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 1.6em;
+  border: 0;
+  will-change: opacity;
+  background: $arrow-background;
+  -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: .8em solid transparent;
+    opacity: 0.5;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+    will-change: border-color, opacity;
+  }
+
+  &.fragmented {
+    opacity: 0.7;
+
+    &:before {
+      opacity: .7;
+    }
+
+  }
+
+}
+
+.controls div.enabled {
+  opacity: 1;
+  cursor: pointer;
+
+  &:before {
+    opacity: 1;
+  }
+
+  &:active {
+    margin-top: 1px;
+  }
+
+}
+
+.controls div.navigate-left {
+  top: 50%;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  transform: translateY(-50%);
+
+  &:before {
+    top: calc(50% - 0.8em);
+    left: calc(50% - 0.5em);
+    border-right-color: $arrow-color;
+    border-left-width: 0;
+  }
+
+}
+
+
+.controls div.navigate-right {
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-50%);
+
+  &:before {
+    top: calc(50% - 0.8em);
+    right: calc(50% - 0.5em);
+    border-left-color: $arrow-color;
+    border-right-width: 0;
+  }
+
+}
+
+.controls div.navigate-up {
+  top: 0;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%);
+
+  &:before {
+    top: calc(50% - 0.5em);
+    left: calc(50% - 0.8em);
+    border-bottom-color: $arrow-color;
+    border-top-width: 0;
+  }
+
+}
+
+.controls div.navigate-down {
+  bottom: 0;
+  left: 50%;
+  top: auto;
+  right: auto;
+  transform: translateX(-50%);
+
+  &:before {
+    bottom: calc(50% - 0.5em);
+    left: calc(50% - 0.8em);
+    border-top-color: $arrow-color;
+    border-bottom-width: 0;
+  }
+
+}

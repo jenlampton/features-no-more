@@ -1,10 +1,11 @@
-@charset "UTF-8";
 /**
- * White theme for reveal.js. This is the opposite of the 'black' theme.
- *
- * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ * Backdrop CMS theme for reveal.js.
+ * - Created by Wes Ruvacabla.
  */
+
+@charset "UTF-8";
 @import url(../../lib/font/open-sans/open-sans.css);
+
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
@@ -14,17 +15,17 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('../../../fonts/SourceSansPro-Black.ttf');
-  src: local('Source Sans Pro'), url('../../../fonts/SourceSansPro-Black.ttf') format('truetype');
+  src: url('../../fonts/SourceSansPro-Black.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/*
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('../../../fonts/SourceSansPro-Bold.ttf');
-  src: local('Source Sans Pro'), url('../../../fonts/SourceSansPro-Bold.ttf') format('truetype');
+  src: url('../../fonts/SourceSansPro-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
 }
-*/
 
 
 /*********************************************

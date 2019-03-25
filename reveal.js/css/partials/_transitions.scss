@@ -1,0 +1,252 @@
+/*********************************************
+ * SLIDE TRANSITION
+ * Aliased 'linear' for backwards compatibility
+ *********************************************/
+
+@each $stylename in slide, linear {
+  .reveal.#{$stylename} section {
+    backface-visibility: hidden;
+  }
+  @include transition-horizontal-past(#{$stylename}) {
+    transform: translate(-150%, 0);
+  }
+  @include transition-horizontal-future(#{$stylename}) {
+    transform: translate(150%, 0);
+  }
+  @include transition-vertical-past(#{$stylename}) {
+    transform: translate(0, -150%);
+  }
+  @include transition-vertical-future(#{$stylename}) {
+    transform: translate(0, 150%);
+  }
+}
+
+/*********************************************
+ * CONVEX TRANSITION
+ * Aliased 'default' for backwards compatibility
+ *********************************************/
+
+@each $stylename in default, convex {
+  @include transition-horizontal-past(#{$stylename}) {
+    transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0);
+  }
+  @include transition-horizontal-future(#{$stylename}) {
+    transform: translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0);
+  }
+  @include transition-vertical-past(#{$stylename}) {
+    transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0);
+  }
+  @include transition-vertical-future(#{$stylename}) {
+    transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0);
+  }
+}
+
+/*********************************************
+ * CONCAVE TRANSITION
+ *********************************************/
+
+@include transition-horizontal-past(concave) {
+  transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0);
+}
+@include transition-horizontal-future(concave) {
+  transform: translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0);
+}
+@include transition-vertical-past(concave) {
+  transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0);
+}
+@include transition-vertical-future(concave) {
+  transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0);
+}
+
+
+/*********************************************
+ * ZOOM TRANSITION
+ *********************************************/
+
+@include transition-global(zoom) {
+  transition-timing-function: ease;
+}
+@include transition-horizontal-past(zoom) {
+  visibility: hidden;
+  transform: scale(16);
+}
+@include transition-horizontal-future(zoom) {
+  visibility: hidden;
+  transform: scale(0.2);
+}
+@include transition-vertical-past(zoom) {
+  transform: translate(0, -150%);
+}
+@include transition-vertical-future(zoom) {
+  transform: translate(0, 150%);
+}
+
+
+/*********************************************
+ * CUBE TRANSITION
+ *********************************************/
+
+.reveal.cube .slides {
+  perspective: 1300px;
+}
+
+.reveal.cube .slides section {
+  padding: 30px;
+  min-height: 700px;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+  .reveal.center.cube .slides section {
+    min-height: 0;
+  }
+  .reveal.cube .slides section:not(.stack):before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+    transform: translateZ( -20px );
+  }
+  .reveal.cube .slides section:not(.stack):after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 30px;
+    left: 5%;
+    bottom: 0;
+    background: none;
+    z-index: 1;
+
+    border-radius: 4px;
+    box-shadow: 0px 95px 25px rgba(0,0,0,0.2);
+    transform: translateZ(-90px) rotateX( 65deg );
+  }
+
+.reveal.cube .slides>section.stack {
+  padding: 0;
+  background: none;
+}
+
+.reveal.cube .slides>section.past {
+  transform-origin: 100% 0%;
+  transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+}
+
+.reveal.cube .slides>section.future {
+  transform-origin: 0% 0%;
+  transform: translate3d(100%, 0, 0) rotateY(90deg);
+}
+
+.reveal.cube .slides>section>section.past {
+  transform-origin: 0% 100%;
+  transform: translate3d(0, -100%, 0) rotateX(90deg);
+}
+
+.reveal.cube .slides>section>section.future {
+  transform-origin: 0% 0%;
+  transform: translate3d(0, 100%, 0) rotateX(-90deg);
+}
+
+
+/*********************************************
+ * PAGE TRANSITION
+ *********************************************/
+
+.reveal.page .slides {
+  perspective-origin: 0% 50%;
+  perspective: 3000px;
+}
+
+.reveal.page .slides section {
+  padding: 30px;
+  min-height: 700px;
+  box-sizing: border-box;
+}
+  .reveal.page .slides section.past {
+    z-index: 12;
+  }
+  .reveal.page .slides section:not(.stack):before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.1);
+    transform: translateZ( -20px );
+  }
+  .reveal.page .slides section:not(.stack):after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 30px;
+    left: 5%;
+    bottom: 0;
+    background: none;
+    z-index: 1;
+
+    border-radius: 4px;
+    box-shadow: 0px 95px 25px rgba(0,0,0,0.2);
+
+    -webkit-transform: translateZ(-90px) rotateX( 65deg );
+  }
+
+.reveal.page .slides>section.stack {
+  padding: 0;
+  background: none;
+}
+
+.reveal.page .slides>section.past {
+  transform-origin: 0% 0%;
+  transform: translate3d(-40%, 0, 0) rotateY(-80deg);
+}
+
+.reveal.page .slides>section.future {
+  transform-origin: 100% 0%;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal.page .slides>section>section.past {
+  transform-origin: 0% 0%;
+  transform: translate3d(0, -40%, 0) rotateX(80deg);
+}
+
+.reveal.page .slides>section>section.future {
+  transform-origin: 0% 100%;
+  transform: translate3d(0, 0, 0);
+}
+
+
+/*********************************************
+ * FADE TRANSITION
+ *********************************************/
+
+.reveal .slides section[data-transition=fade],
+.reveal.fade .slides section:not([data-transition]),
+.reveal.fade .slides>section>section:not([data-transition]) {
+  transform: none;
+  transition: opacity 0.5s;
+}
+
+
+.reveal.fade.overview .slides section,
+.reveal.fade.overview .slides>section>section {
+  transition: none;
+}
+
+
+/*********************************************
+ * NO TRANSITION
+ *********************************************/
+
+@include transition-global(none) {
+  transform: none;
+  transition: none;
+}

@@ -14,9 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/columns.css">
     <link rel="stylesheet" href="reveal.js/plugin/prism/prism.css">
-    <link rel="stylesheet" href="reveal.js/plugin/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/vienna.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/plugin/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/seattle.css" id="theme">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -38,147 +39,189 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 
-        <section data-background="images/slide-cover.jpg" data-background-transition="slide" data-state="cover">
-          <h1>A world without Features</h1>
-          <h3>by Jen Lampton</h3>
+        <section data-background="images/seattle-cover.jpg" data-background-transition="slide">
+          <h1>&nbsp;</h1>
         </section>
 
-        <section data-background="images/slide-light.jpg" data-background-transition="slide">
+        <section data-background="images/seattle-start.jpg" data-background-transition="slide" data-state="cover">
+          <h1>A world without Features</h1>
+          <h3>How to save time when managing your exportables</h3>
+          <h6 class="foot subtitle">by Jen Lampton</h6>
+        </section>
+
+        <section data-background="images/seattle-light.jpg" data-background-transition="slide">
           <h1>Hi!</h1>
-          <h2>You might already know me from...</h2>
+          <h2>You might recognize me from...</h2>
           <ul>
-            <li class="fragment">BADCamp</li>
             <li class="fragment">Twig</li>
+            <li class="fragment">BADCamp</li>
             <li class="fragment">Backdrop CMS</li>
           </ul>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h1>I'm Jen Lampton</h1>
-          <h3 class="fragment">I've been a Drupaler for ~11 years <i class="fa fa-heart" aria-hidden="true"></i></h3>
+        <section data-background="images/seattle-light.jpg">
+          <h1>Old timer</h1>
+          <h3 class="fragment">I've been a Drupaler for ~12.5 years <i class="fa fa-heart" aria-hidden="true"></i></h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>I'm an independant contractor.</h2>
+        <section data-background="images/seattle-light.jpg">
+          <h1>Independant contractor</h1>
           <ul>
-            <li class="fragment">smaller teams (1-4 people)</li>
-            <li class="fragment">projects with smaller budgets ($10k - $75k)</li>
-            <li class="fragment">smaller sites</li>
+            <li class="fragment">small teams (1-4 people)</li>
+            <li class="fragment">projects with small budgets ($75k and under)</li>
+            <li class="fragment">smaller sites (well, usually)</li>
           </ul>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <img src="images/mtc.png" width="600px">
-          <h4 style="margin:0">Example site: <a href="https://mtc.ca.gov">https://mtc.ca.gov</a></h4>
+        <section data-state="taller" data-background="images/seattle-light.jpg">
+          <h2>Example Site</h2>
+          <div class="column-wrapper">
+            <div>
+              <img src="images/mtc.png" width="450px">
+            </div>
+            <div class="align-left pad-left">
+              <ul>
+                <li class="fragment">2 active developers</li>
+                <li class="fragment">~10 active editors</li>
+                <li class="fragment">~120 contrib modules enabled</li>
+                <li class="fragment">Built on Drupal 7</li>
+              </ul>
+              <h6 class="foot"><a href="https://mtc.ca.gov">Metropolitan Transportation Commission</a></h6>
+            </div>
+          </div>
         </section>
 
-
-        <section data-background="images/slide-light.jpg">
-          <h2>Example site: <a href="https://mtc.ca.gov">https://mtc.ca.gov</a></h2>
-          <ul>
-            <li>2 active developers</li>
-            <li class="fragment">~10 active editors</li>
-            <li class="fragment">~100 contrib modules in use</li>
-            <li class="fragment">Built in Drupal 7</li>
-          </ul>
-        </section>
-
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h1>Drupal 7</h1>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Quick Poll</h1>
           <ul>
             <li class="fragment">How many of you are running or managing D7 sites?</li>
-            <li class="fragment">Using the features module on any of those D7 sites?</li>
-            <li class="fragment">Had any troubles managing your features?</li>
+            <li class="fragment">Using the Features module on any of those D7 sites?</li>
+            <li class="fragment">Had any troubles managing your Features lately?</li>
           </ul>
-          <h3 class="fragment">This talk might help you!</h3>
+          <h2 class="fragment">This talk us for you!</h2>
         </section>
 
 
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h1>Features</h1>
-          <h3>An awesome Module for Drupal!</h3>
-          <h4>https://drupal.org/project/features</h4>
+          <h6 class="foot">https://drupal.org/project/features</h6>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>Two use-cases for using Features:</h2>
-          <ol>
+        <section data-background="images/seattle-light.jpg">
+          <h1>2 Use-cases for Features</h1>
+          <ol class="larger">
             <li class="fragment">Bundling functionality together</li>
             <li class="fragment">Configuration management</li>
           </ol>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>#1 Bundling functionality together</h2>
-          <h3>Example: photo gallery</h3>
-          <h4 class="fragment">(this is the use-case for which the module was named)</h4>
+        <section data-background="images/seattle-light.jpg">
+          <h2>1. Bundling functionality together</h2>
+          <h3 class="fragment">A Photo Gallery</h3>
+          <div class="column-wrapper">
+            <div>
+              <ul class="fragment">
+                <li>content type</li>
+                <li>fields</li>
+                <li>image styles</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="fragment">
+                <li>views</li>
+                <li>panels</li>
+                <li>contexts</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="fragment">
+                <li>flexslider presets</li>
+                <li>user roles</li>
+                <li>workflow moderation states</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="fragment">This is the use-case for which the module was named.</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>#2 Configuration management</h2>
-          <h3>Improved developer workflow (existing sites)</h3>
-          <h4 class="fragment">(this is the more common use-case*)</h4>
+        <section data-background="images/seattle-light.jpg">
+          <h2>2. Configuration management</h2>
+          <h3 class="fragment">Developer workflow</h3>
+          <div class="column-wrapper fragment pad-top pad-bottom">
+            <div style="width: 32%">
+              Make changes to how a Drupal site is configured.
+            </div>
+            <div style="width: 32%">
+              Package all these changes up together neatly.
+            </div>
+            <div style="width: 32%">
+              Safely<small>(tm)</small> deploy the changes to dev/test/live site.
+            </div>
+          </div>
+          <h3 class="fragment">This is the more common use-case*</h4>
         </section>
 
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
-          <h1>This sounds great!</h1>
-          <h4 class="fragment">In theory... yes! But, on smaller sites?</h4>
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
+          <h1>Sounds great!</h1>
+          <h2 class="fragment">In theory... but on smaller sites?</h2>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>#1 Bundling functionality together</h2>
-          <h4>I have only delivered the <strong>exact same</strong> photo gallery on more than one site <strong>one time</strong>.</h4>
-          <h4 class="fragment">(so, let's set aside use-case #1)</h4>
+        <section data-background="images/seattle-light.jpg">
+          <h2>1. Bundling functionality together</h2>
+          <p>I have only delivered the <strong>exact same</strong> photo gallery on more than one website only <strong>3 times</strong> in <strong>22 years</strong> of being a web developer.</p>
+          <p>... and 2 of those 3 times were on a multi-site installation.</p>
+          <h3 class="fragment">(so, let's set aside use-case 1)</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>#2 Configuration management</h2>
-          <h4>Every site I've used features on has had problems. My 3 favs:</h4>
+        <section data-background="images/seattle-light.jpg">
+          <h2>2. Configuration management</h2>
+          <p>Every site I've used features on has suffered from  issues related to storing configuration as Fatures.</p>
+          <p>My 3 favorites:</p>
           <ul>
-            <li class="fragment">Performace</li>
-            <li class="fragment">Developer Time</li>
-            <li class="fragment">Developer Sanity</li>
+            <li class="fragment">Site slows down</li>
+            <li class="fragment">Time Wasted</li>
+            <li class="fragment">Sanity Lost</li>
           </ul>
         </section>
 
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
-          <h1>It's not Features fault!</h1>
-          <h3 class="fragment">(it's Drupal's)</h3>
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
+          <h1>Don't blame Features</h1>
         </section>
 
-        <section data-background="images/slide-light.jpg">
-          <h2>These kinds of problems are harder for smaller sites</h2>
+        <section data-background="images/seattle-light.jpg">
+          <h2>These kinds of problems are harder for small teams.</h2>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Performace</h1>
           <h3 class="fragment">Smaller sites may not benefit from fancy/expsnsive hosting w/ lots of cache layers</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Developer Time</h1>
           <h3 class="fragment">Overages hurt more.</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Developer Sanity</h1>
           <h3 class="fragment">...okay, you got me.</h3>
         </section>
 
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h1>Is there another way?</h1>
           <h3 class="fragment">maybe!</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>How does the Features module work?</h1>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Drupal's API!</h1>
           <ul>
             <li class="fragment">Provides ways to ingest things from code</li>
@@ -186,12 +229,12 @@
           <h4 class="fragment">(these are all the things that work <strong>reliably</strong> with Features.)</h4>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Drupal's API!</h1>
           <h4 class="fragment">You could invoke these same hooks, in a similar way, with your own custom code.</h4>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h2>But, what about all the other things?</h2>
           <h4>Drupal expects some configuratons to be in the database and <strong>not in code</strong>.</h4>
           <div class="fragment">
@@ -200,7 +243,7 @@
           </div>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h2>Two ways to manage config in the database</h2>
           <ol>
             <li class="fragment">Do things manually (if it's safe)</li>
@@ -208,7 +251,7 @@
           </ol>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h2>Way #1: Doin' it manually</h2>
           <ol>
             <li>Take good notes, then follow them.
@@ -224,18 +267,18 @@
           </ol>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h2>Way #2: Updain' it oldskool-like</h2>
           <h3>Write an update hook.</h3>
           <h4>If you need to modify something at the exact time of deployment, this is your ticket.</h4>
         </section>
 
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h2>OMG!</h2>
           <h1>CUSTOM CODE!!!</h1>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>Let's reveiw the goal:</h1>
           <ul>
             <li class="fragment">Don't harm site performace</li>
@@ -244,11 +287,11 @@
           </ul>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h4>I've been able to achieve all of these things <strong>reliably</strong><br>using <strong>custom code</strong>.</h4>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>What's in the code?</h1>
           <ul>
             <li>A stub module for each type of configuration that can be cleanly exported containing organized, individual files for each export.</li>
@@ -256,17 +299,17 @@
           </ul>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>An example:</h1>
           <h2>For managing your views</h2>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>An example:</h1>
           <h2>For managing your panels</h2>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h1>More examples:</h1>
           <ul>
             <li>For managing your view modes</li>
@@ -275,36 +318,36 @@
           </ul>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h3>Many systems already have a way to define (or override) their defaults.</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h3>Custom code is not so scary when you have an example to work from.</h3>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h2>I've open-sourced all the code we looked at today (and more!):</h2>
           <p><i class="fa fa-github" aria-hidden="true"></i> <a href="ttps://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
         </section>
 
-        <section data-background="images/slide-light.jpg">
+        <section data-background="images/seattle-light.jpg">
           <h3>My team has found that using these modules create more stable sites, and more sane developers.</h3>
         </section>
 
-        <section data-background="images/slide-dark.jpg" data-background-transition="slide" class="dark">
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h1>Questions?</h1>
           <p><i class="fa fa-github" aria-hidden="true"></i> <a href="ttps://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
         </section>
 
-        <section data-background="images/slide-light-thanks.jpg" data-background-transition="slide" data-state="thanks">
+        <section data-background="images/seattle-start.jpg" data-background-transition="slide" data-state="cover">
           <h1>A world without Features</h1>
-          <h3>by Jen Lampton</h3>
+          <h3>How to save time when managing your exportables</h3>
+          <h6 class="foot subtitle">by Jen Lampton</h6>
         </section>
 
-        <section data-background="images/slide-cover.jpg" data-background-transition="slide" data-state="cover">
-          <h1>A world without Features</h1>
-          <h3>by Jen Lampton</h3>
+        <section data-background="images/seattle-cover.jpg" data-background-transition="slide">
+          <h1>&nbsp;</h1>
         </section>
 
       </div>
