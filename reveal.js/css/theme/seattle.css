@@ -194,8 +194,8 @@ section h6:first-child {
 
 .reveal li {
   margin: 0 0 0.5em;
-  font-family: "Montserrat", Helvetica, sans-serif;
   color: #3A546A;
+  font-weight: 300; /* light */
 }
 
 .reveal ol {
@@ -315,14 +315,13 @@ pre {
 .reveal small,
 .reveal .small {
   font-size: 0.75em;
-  line-height: 1em; }
-
-.reveal small {
+  line-height: 1em;
   display: inline-block;
-  vertical-align: top; }
-
+  vertical-align: baseline;
+}
 .reveal small * {
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 /*********************************************
  * LINKS
