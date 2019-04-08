@@ -148,7 +148,7 @@ section h6:first-child {
 }
 .reveal h5,
 .reveal h6 {
-  font-size: 33px;
+  font-size: .9em;
   letter-spacing: 1px;
 }
 .reveal h6 {
@@ -157,13 +157,23 @@ section h6:first-child {
   letter-spacing: 1px;
 }
 
+.reveal h4 strong,
+.reveal h5 strong {
+  font-weight: 500; /* normal */
+}
+
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
   margin: 45px 0;
-  line-height: 1.4;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+.reveal p.nomargin {
+  margin: 0;
 }
 
 /* Ensure certain elements are never larger than the slide itself */
@@ -315,9 +325,10 @@ pre {
 .reveal small,
 .reveal .small {
   font-size: 0.75em;
-  line-height: 1em;
+  line-height: 1.25em;
   display: inline-block;
   vertical-align: baseline;
+  font-weight: 300; /* light */
 }
 .reveal small * {
   vertical-align: top;
@@ -507,6 +518,9 @@ html.thanks body section h3 {
 .reveal .subtitle {
   color: #D8113A;
   font-weight: 300; /* light */
+}
+.reveal .red {
+  color: #D8113A;
 }
 
 /* stick it to tbe bottom */
