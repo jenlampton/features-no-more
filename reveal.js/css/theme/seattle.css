@@ -568,3 +568,9 @@ html.thanks body section h3 {
 .reveal .align-right {
   text-align: right;
 }
+
+
+.reveal .screenshot {
+  max-height: 500px;
+  overflow: hidden;
+}

@@ -54,7 +54,7 @@
           <h3>I am Jen Lampton</h3>
           <h4 class="fragment">You might recognize me from...</h4>
           <ul>
-            <li class="fragment">Twig <small>(2011-2013)</small></li>
+            <li class="fragment">Twig in Drupal 8 <small>(2011-2013)</small></li>
             <li class="fragment">BADCamp <small>(2007-2017)</small></li>
             <li class="fragment">Backdrop CMS <small>(2013+)</small></li>
           </ul>
@@ -65,8 +65,8 @@
           <h3>I've been a Drupaler for ~12.5 years <i class="fa fa-heart" aria-hidden="true"></i></h3>
           <ul>
             <li class="fragment">small web shop <small>(2003-2008)</small></li>
-            <li class="fragment">medium Drupal shop <small>(2008-2012)</small></li>
-            <li class="fragment">Independant contractor <small>(2012+)</small></li>
+            <li class="fragment">larger Drupal shop <small>(2008-2012)</small></li>
+            <li class="fragment">independant contractor <small>(2012+ / 2003-)</small></li>
           </ul>
         </section>
 
@@ -83,7 +83,9 @@
           <h2>Example Site</h2>
           <div class="column-wrapper">
             <div>
-              <img src="images/mtc.png" width="450px">
+              <div class="screenshot">
+                <img src="images/mtc.png" width="450px">
+                </div>
             </div>
             <div class="align-left pad-left">
               <ul>
@@ -148,11 +150,12 @@
               <ul class="fragment">
                 <li>moderation states</li>
                 <li>user roles</li>
+                <li>more!</li>
               </ul>
             </div>
           </div>
 
-          <h3 class="fragment">This is the use-case for which the module was named.</h3>
+          <h3 class="fragment">The use-case for which the module was named.</h3>
         </section>
 
         <section data-background="images/seattle-light.jpg">
@@ -174,7 +177,7 @@
 
         <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h1>Sounds great!</h1>
-          <h2 class="fragment">In theory... but on smaller sites?</h2>
+          <h2 class="fragment">In theory...</h2>
         </section>
 
         <section data-background="images/seattle-light.jpg">
@@ -197,6 +200,11 @@
 
         <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h1>Don't blame Features</h1>
+        </section>
+
+        <section data-background="images/seattle-light.jpg">
+          <h1>Features is the best tool we have for this job</h1>
+          <h3>(in Drupal 7)</h3>
         </section>
 
         <section data-background="images/seattle-light.jpg">
@@ -234,7 +242,8 @@
 
         <section data-background="images/seattle-light.jpg">
           <h1>I can do that!</h1>
-          <p>Use the API in the way it was intended: write a module.</p>
+          <h3>Use the API in the way it was intended:</h3>
+          <h2>Write a custom module.</h2>
         </section>
 
         <section data-background="images/seattle-light.jpg">
@@ -272,13 +281,13 @@
 
         <section data-background="images/seattle-light.jpg">
           <h2>Way #2: Updain' it oldskool-like</h2>
-          <h3>Write an update hook.</h3>
+          <h3>Add an update hook to your custom module.</h3>
           <p>If you need to modify something only at the time of deployment, this is your ticket.</p>
         </section>
 
         <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
           <h2>OMG!</h2>
-          <h1>CUSTOM CODE!!!</h1>
+          <h1>CUSTOM CODE!?!</h1>
         </section>
 
         <section data-background="images/seattle-light.jpg">
@@ -286,40 +295,20 @@
           <ul>
             <li class="fragment">Don't harm site performace</li>
             <li class="fragment">Save developer time (and client $)</li>
-            <li class="fragment">Retain developer sanity</li>
+            <li class="fragment">Retain everyone's sanity</li>
           </ul>
         </section>
 
         <section data-background="images/seattle-light.jpg">
-          <h1>I've been able to achieve all of these goals <strong>reliably</strong><br>using custom code.</h1>
+          <h2>I've been able to achieve all of these goals <strong>reliably</strong><br>using custom code.</h2>
+          <h3>(instead of using Features)</h3>
         </section>
 
         <section data-background="images/seattle-light.jpg">
           <h1>What's in the code?</h1>
           <ul>
-            <li>A module for each type of configuration that can be cleanly exported: Contains organized, individual, files for each export.</li>
+            <li>A module for each type of configuration that can be cleanly exported: <strong>organized, individual files</strong> for each export.</li>
             <li>And (if you want) a custom module specifically for updates at the time of deployment.</li>
-          </ul>
-        </section>
-
-        <section data-background="images/seattle-light.jpg">
-          <h1>An example:</h1>
-          <h2>For managing your views</h2>
-        </section>
-
-        <section data-background="images/seattle-light.jpg">
-          <h1>An example:</h1>
-          <h2>For managing your panels</h2>
-        </section>
-
-        <section data-background="images/seattle-light.jpg">
-          <h1>More examples:</h1>
-          <ul>
-            <li>For managing your image styles</li>
-            <li>...view modes</li>
-            <li>...date formats</li>
-            <li>...flexslider presets</li>
-            <li>...feeds importers</li>
           </ul>
         </section>
 
@@ -332,20 +321,36 @@
         </section>
 
         <section data-background="images/seattle-light.jpg">
-          <h2>I've open-sourced all the code we looked at today (and more!):</h2>
+          <h1>An example:</h1>
+          <h2>For managing your views</h2>
+          <p class="foot"><small><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></small></p>
+        </section>
+
+        <section data-background="images/seattle-light.jpg">
+          <h1>An example:</h1>
+          <h2>For managing your panels</h2>
+          <p class="foot"><small><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></small></p>
+        </section>
+
+        <section data-background="images/seattle-light.jpg">
+          <h1>More examples:</h1>
+          <ul>
+            <li>For managing your image styles</li>
+            <li>...view modes</li>
+            <li>...date formats</li>
+            <li>...flexslider presets</li>
+            <li>...feeds importers</li>
+            <li>...more!</li>
+          </ul>
+        </section>
+
+        <section data-background="images/seattle-light.jpg">
+          <h2>I've open-sourced my "stub" modules for each of these things:</h2>
           <p><i class="fa fa-github" aria-hidden="true"></i> <a href="ttps://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
         </section>
 
         <section data-background="images/seattle-light.jpg">
-          <h2>My team has found that using this process creates <strong>more stable sites</strong>.</h2>
-        </section>
-
-        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
-          <h2>Questions?</h2>
-          <p>Survey<br>
-            <i class="fa fa-star" aria-hidden="true"></i> <a href="http://bit.ly/no-more-features">http://bit.ly/no-more-features</a></p>
-          <p>Code<br>
-           <i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
+          <h2>Quickly, before questions:</h2>
         </section>
 
         <section data-background="images/seattle-light.jpg">
@@ -370,6 +375,14 @@
             </div>
           </div>
           <h2 class="red foot">#DrupalContributions</h2>
+        </section>
+
+        <section data-background="images/seattle-dark.jpg" data-background-transition="slide" class="dark">
+          <h2>Questions?</h2>
+          <p>Survey<br>
+            <i class="fa fa-star" aria-hidden="true"></i> <a href="http://bit.ly/no-more-features">http://bit.ly/no-more-features</a></p>
+          <p>Code<br>
+           <i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/jenlampton/jenerate">https://github.com/jenlampton/jenerate</a></p>
         </section>
 
         <section data-background="images/seattle-start.jpg" data-background-transition="slide" data-state="cover">
