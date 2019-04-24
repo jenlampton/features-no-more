@@ -33,3 +33,8 @@ managing Drupal's exportables like image styles, views, and panels, without
 using the features module.
 
 Attendees should have a basic understanding of how to create simple Drupal 7 modules.
+
+---
+
+This session was presented at [DrupalCon Seattle](https://events.drupal.org/seattle2019/sessions/world-without-features-save-time-managing-exportables) in 2019.
+This session was presented at [DrupalCon Vienna](https://events.drupal.org/vienna2017/sessions/world-without-features-how-save-time-when-managing-your-exportables) in 2017.
